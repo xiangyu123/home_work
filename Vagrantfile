@@ -3,7 +3,6 @@ BOX_VERSION = "18.06.0"
 
 Vagrant.configure("2") do |config|
     config.ssh.insert_key = true
-    config.vbguest.auto_update = false
     #config.vm.network :public_network,:bridge=>'en0: Wi-Fi (AirPort)'
     config.vm.network "forwarded_port", guest: 8080, host: 8080
     config.vm.network "forwarded_port", guest: 8083, host: 8083
